@@ -27,6 +27,10 @@ def main():
         np.array(images), np.array(labels), test_size=TEST_SIZE
     )
 
+    # Normalize image data
+    x_train = x_train / 255.0
+    x_test = x_test / 255.0
+
     # Get a compiled neural network
     model = get_model()
 
